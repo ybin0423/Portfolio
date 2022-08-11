@@ -61,6 +61,8 @@ INSERT INTO student_mh(gender,age,major,year,CGPA,marital_status,depression,anxi
 INSERT INTO student_mh(gender,age,major,year,CGPA,marital_status,depression,anxiety,panic_attack) VALUES ('Female',19,'Engineering',1,'3.50-4.00','No','No','Yes','No');
 INSERT INTO student_mh(gender,age,major,year,CGPA,marital_status,depression,anxiety,panic_attack) VALUES ('Female',18,'Engineering',4,'3.50-4.00','No','No','No','No');
 INSERT INTO student_mh(gender,age,major,year,CGPA,marital_status,depression,anxiety,panic_attack) VALUES ('Male',24,'BCS',2,'3.00-3.49','No','Yes','No','No');
+INSERT INTO student_mh(gender,age,major,year,CGPA,marital_status,depression,anxiety,panic_attack) VALUES ('Female',24,'BCS',3,'3.50-4.00','No','No','No','Yes');
+INSERT INTO student_mh(gender,age,major,year,CGPA,marital_status,depression,anxiety,panic_attack) VALUES ('Female',23,'ALA',1,'2.50-2.99','Yes','Yes','No','Yes');
 
 SELECT * FROM student_mh;
 
