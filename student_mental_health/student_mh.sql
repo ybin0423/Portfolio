@@ -1,5 +1,5 @@
 /* Source From: 
-https://www.kaggle.com/datasets/osmi/mental-health-in-tech-survey
+https://www.kaggle.com/datasets/shariful07/student-mental-health
 */
 
 CREATE TABLE student_mh (
