@@ -52,6 +52,15 @@ INSERT INTO student_mh(gender,age,major,year,CGPA,marital_status,depression,anxi
 INSERT INTO student_mh(gender,age,major,year,CGPA,marital_status,depression,anxiety,panic_attack) VALUES ('Female',18,'Law',3,'3.00-3.49','No','Yes','Yes','No');
 INSERT INTO student_mh(gender,age,major,year,CGPA,marital_status,depression,anxiety,panic_attack) VALUES ('Female',19,'BIT',1,'2.50-2.99','No','Yes','Yes','Yes');
 INSERT INTO student_mh(gender,age,major,year,CGPA,marital_status,depression,anxiety,panic_attack) VALUES ('Female',18,'KIRKHS',1,'3.50-4.00','No','No','No','No');
+INSERT INTO student_mh(gender,age,major,year,CGPA,marital_status,depression,anxiety,panic_attack) VALUES ('Female',24,'Engineering',2,'2.50-2.99','Yes','Yes','No','Yes');
+INSERT INTO student_mh(gender,age,major,year,CGPA,marital_status,depression,anxiety,panic_attack) VALUES ('Female',24,'BIT',3,'3.00-3.49','No','No','Yes','No');
+INSERT INTO student_mh(gender,age,major,year,CGPA,marital_status,depression,anxiety,panic_attack) VALUES ('Female',22,'Engineering',4,'3.50-4.00','No','No','No','No');
+INSERT INTO student_mh(gender,age,major,year,CGPA,marital_status,depression,anxiety,panic_attack) VALUES ('Female',20,'Usuluddin',2,'3.00-3.49','No','Yes','No','No');
+INSERT INTO student_mh(gender,age,major,year,CGPA,marital_status,depression,anxiety,panic_attack) VALUES ('Male',23,'TAASL',2,'3.50-4.00','No','No','No','Yes');
+INSERT INTO student_mh(gender,age,major,year,CGPA,marital_status,depression,anxiety,panic_attack) VALUES ('Male',18,'BCS',1,'3.50-4.00','No','No','Yes','Yes');
+INSERT INTO student_mh(gender,age,major,year,CGPA,marital_status,depression,anxiety,panic_attack) VALUES ('Female',19,'Engineering',1,'3.50-4.00','No','No','Yes','No');
+INSERT INTO student_mh(gender,age,major,year,CGPA,marital_status,depression,anxiety,panic_attack) VALUES ('Female',18,'Engineering',4,'3.50-4.00','No','No','No','No');
+INSERT INTO student_mh(gender,age,major,year,CGPA,marital_status,depression,anxiety,panic_attack) VALUES ('Male',24,'BCS',2,'3.00-3.49','No','Yes','No','No');
 
-
+SELECT * FROM student_mh;
 
