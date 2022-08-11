@@ -1,6 +1,7 @@
 /* Source From: 
 https://www.kaggle.com/datasets/osmi/mental-health-in-tech-survey
 */
+
 CREATE TABLE student_mh (
 id INTEGER PRIMARY KEY,
 gender TEXT,
@@ -13,6 +14,12 @@ depression TEXT,
 anxiety TEXT,
 panic_attack TEXT
 );
+
+CREATE TABLE binary (
+answer TEXT,
+number INTEGER
+);
+
 INSERT INTO student_mh(gender,age,major,year,CGPA,marital_status,depression,anxiety,panic_attack) VALUES ('Female',18,'Engineering',1,'3.00-3.49','No','Yes','No','Yes');
 INSERT INTO student_mh(gender,age,major,year,CGPA,marital_status,depression,anxiety,panic_attack) VALUES ('Male',21,'Islamic education',2,'3.00-3.49','No','No','Yes','No');
 INSERT INTO student_mh(gender,age,major,year,CGPA,marital_status,depression,anxiety,panic_attack) VALUES ('Male',19,'BIT',1,'3.00-3.49','No','Yes','Yes','Yes');
@@ -64,5 +71,38 @@ INSERT INTO student_mh(gender,age,major,year,CGPA,marital_status,depression,anxi
 INSERT INTO student_mh(gender,age,major,year,CGPA,marital_status,depression,anxiety,panic_attack) VALUES ('Female',24,'BCS',3,'3.50-4.00','No','No','No','Yes');
 INSERT INTO student_mh(gender,age,major,year,CGPA,marital_status,depression,anxiety,panic_attack) VALUES ('Female',23,'ALA',1,'2.50-2.99','Yes','Yes','No','Yes');
 
-SELECT * FROM student_mh;
+INSERT INTO binary(answer,number) VALUES ('No',0);
+INSERT INTO binary(answer,number) VALUES('Yes',1);
 
+SELECT * FROM student_mh;
+SELECT * FROM binary;
+
+/*number of depression,anxiety and panic attack responded according to the CGPA */
+SELECT student_mh.CGPA,
+SUM(a.number) AS responded_depression,
+SUM(b.number) AS responded_anxiety,
+SUM(c.number) AS responded_panic_attack FROM student_mh 
+JOIN binary a ON student_mh.depression=a.answer 
+JOIN binary b ON student_mh.anxiety=b.answer 
+JOIN binary c ON student_mh.panic_attack=c.answer
+GROUP BY student_mh.CGPA ORDER BY student_mh.CGPA DESC;
+
+/*number of depression,anxiety and panic attack responded according to gender */
+SELECT student_mh.gender,
+SUM(a.number) AS responded_depression,
+SUM(b.number) AS responded_anxiety,
+SUM(c.number) AS responded_panic_attack FROM student_mh 
+JOIN binary a ON student_mh.depression=a.answer 
+JOIN binary b ON student_mh.anxiety=b.answer 
+JOIN binary c ON student_mh.panic_attack=c.answer
+GROUP BY student_mh.gender ORDER BY responded_depression DESC;
+
+/*number of depression, anxiety and panic attack responded according to current year of study */
+SELECT student_mh.year,
+SUM(a.number) AS responded_depression,
+SUM(b.number) AS responded_anxiety,
+SUM(c.number) AS responded_panic_attack FROM student_mh 
+JOIN binary a ON student_mh.depression=a.answer 
+JOIN binary b ON student_mh.anxiety=b.answer 
+JOIN binary c ON student_mh.panic_attack=c.answer
+GROUP BY student_mh.year ORDER BY student_mh.year DESC;
