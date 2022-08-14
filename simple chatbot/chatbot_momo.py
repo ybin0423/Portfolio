@@ -3,7 +3,7 @@
 
 import pandas
 
-data = pandas.read_excel('Documents/chatbot_conversation.xlsx')
+data = pandas.read_excel('chatbot_conversation.xlsx')
 
 momo = {}
 start = 0
