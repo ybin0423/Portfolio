@@ -1,4 +1,4 @@
-Scheduler
+-Scheduler
 Having difficulty from manually finding a way to suit all of my courses into a timetable, 
 I created a scheduler to automatically build timetable to take all of my possible courses without collapsing.
 
