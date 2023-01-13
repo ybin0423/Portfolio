@@ -1,1 +1,18 @@
-.
+(define (problem tower)(:domain tower_domain)
+  (:objects t1 t2 t3 d1 d2 d3 d4 d5 d6)
+  (:init 
+  (smaller d1 t1)(smaller d2 t1)(smaller d3 t1)(smaller d4 t1)(smaller d5 t1)(smaller d6 t1) 
+  (smaller d1 t2)(smaller d2 t2)(smaller d3 t2)(smaller d4 t2)(smaller d5 t2)(smaller d6 t2) 
+  (smaller d1 t3)(smaller d2 t3)(smaller d3 t3)(smaller d4 t3)(smaller d5 t3)(smaller d6 t3) 
+  (smaller d1 d2)(smaller d1 d3)(smaller d1 d4)(smaller d1 d5)(smaller d1 d6) 
+  (smaller d2 d3)(smaller d2 d4)(smaller d2 d5)(smaller d2 d6)
+  (smaller d3 d4)(smaller d3 d5)(smaller d3 d6)
+  (smaller d4 d5)(smaller d4 d6)
+  (smaller d5 d6) 
+  (clear t2)(clear t3)(clear d1)  
+  (on d1 d2)(on d2 d3)(on d3 d4)(on d4 d5)(on d5 d6)(on d6 t1)
+  )
+  (:goal 
+  (and (on d1 d2) (on d2 d3) (on d3 d4) (on d4 d5) (on d5 d6) (on d6 t3))
+  )
+)
