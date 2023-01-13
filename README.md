@@ -6,9 +6,7 @@ This page contains my start up projects of data science and software development
 
 
 👩‍🎓 Languages
-* Proficient knowledge of Python, C
-* Basic knowledge of C++, Java
-* Currently studying R
+* Experience with Python, C, C++, C#, Unity, Java, SQL, Julia, Javascript, Matlab
 
 🚀 Projects
 * Student Mental Health project - written in SQL
