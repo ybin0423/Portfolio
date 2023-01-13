@@ -1,0 +1,65 @@
+// Velo API Reference: https://www.wix.com/velo/reference/api-overview/introduction
+import wixData from 'wix-data';
+import {sentTextMessage} from "backend/twilio";
+
+
+$w.onReady(function () {
+
+    // Write your Javascript code here using the Velo framework API
+
+    // Print hello world:
+    // console.log("Hello world!");
+
+    // Call functions on page elements, e.g.:
+    // $w("#button1").label = "Click me!";
+
+    // Click "Run", or Preview your site, to execute your code
+});
+
+export async function signUpButton_click(event) {
+	// This function was added from the Properties & Events panel. To learn more, visit http://wix.to/UcBnC-4
+	// Add your code for this event here: 
+     
+    let name = $w('#nameInput').value;
+    let phoneNum = $w('#phoneNumberInput').value;
+    let storyInd = $w("#StorySS").currentIndex;
+    let ST = "";
+    
+    wixData.query("StoryCards")
+        .eq("StoryIndex",storyInd)
+        .find()
+        .then((results) => {
+            if(results.items.length > 0) {
+                  
+                const row = results.items[0];
+                
+                ST = results.items[0].title;
+                console.log(ST+"ye") 
+            } else {
+               ST= "Story_not_found";
+            }
+        })
+        .catch((err) => {
+            console.log(err);
+    });
+     let dataToStore = {
+        "title": name,
+        "phoneNumber": phoneNum,
+        "story" : storyInd
+
+
+
+    };
+	wixData.insert("UserList", dataToStore)
+    .then((result) => {
+            console.log(result);
+            $w('#nameInput, #phoneNumberInput').value = "";
+            $w('#StorySS').currentSlide;
+
+        });
+    console.log(ST+"0")
+
+    sentTextMessage(phoneNum,ST);
+
+  
+}
