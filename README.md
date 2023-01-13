@@ -6,11 +6,15 @@ This page contains my start up projects of data science, which are written in pr
 
 
 👩‍🎓 Languages
-* Basic knowledge of Python, SQL
+* Proficient knowledge of Python, C
+* Basic knowledge of C++, Java
 * Currently studying R
 
 🚀 Projects
 * Student Mental Health project - written in SQL
+* BuddyOut
+* Unity 3D Game
+* PDDL for 6 tower of Hanoi
 
 🌏 Contact info
 * Email: prongs0423@gmail.com
