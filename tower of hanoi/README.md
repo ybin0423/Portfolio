@@ -1,4 +1,4 @@
-Tower of Hanoi with 6 disks
+- Tower of Hanoi with 6 disks
 
 The problem is building a Tower of Hanoi with 6 disks with PDDL code.
 
