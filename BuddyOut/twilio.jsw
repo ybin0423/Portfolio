@@ -1,0 +1,21 @@
+import twilio from 'twilio';
+import wixSecretsBackend from 'wix-secrets-backend';
+
+
+export async function sentTextMessage(toPhoneNumber, storyTitle){
+    const twilioAuthToken = await wixSecretsBackend.getSecret('twilioAuthToken');
+    const twilioAccountSid = await wixSecretsBackend.getSecret('twilioAccountSid');
+    const twilioPhoneNumber = await wixSecretsBackend.getSecret('twilioPhoneNumber');
+
+    console.log(storyTitle+"1")
+    const twilioClient = new twilio(twilioAccountSid, twilioAuthToken)
+    console.log("check0")
+    
+
+    console.log(toPhoneNumber)
+        twilioClient.messages.create({
+            "to": toPhoneNumber,
+            "from": twilioPhoneNumber,
+            "body": "Your friend, Little Red Riding Hood is lost and needs directions to your house NOW! Someone might be folowing her."
+        })
+}
