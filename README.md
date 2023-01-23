@@ -10,7 +10,7 @@ This page contains my start up projects of data science and software development
 
 🚀 Projects
 * Student Mental Health project - written in SQL
-* BuddyOut -  used Wix, Twillio and Javascript (collaborated with rahman-fai)
+* BuddyOut -  used Wix, Twillio and Javascript (collaborated with 3 more colleagues)
 * Unity 3D Game - used Unity, C#
 * PDDL for 6 tower of Hanoi - used PDDL
 
